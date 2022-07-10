@@ -1,0 +1,69 @@
+    const favoriteLocationsData = [
+      {
+        image: 'images/colorado.JPG',
+        title: 'Colorado',
+        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
+        date: 'March 2, 2022',
+        tags: [
+          'Camera',
+          'nature'
+        ]
+      },
+      {}
+      
+    ]
+    
+    addElement()
+    function addElement () {
+
+//       locations.forEach((location, key) => {
+
+//   // create a new div element
+//   const locationWrapper = document.createElement("div");
+//   locationWrapper.className = 'location'
+
+//   const imageWrapper =  document.createElement("div")
+//   imageWrapper.className = 'image-wrapper'
+
+//   const image = document.createElement('img')
+//   image.className = 'thumbnail'
+//   image.setAttribute('src', location.image)
+//   image.setAttribute('width', '109')
+//   image.setAttribute('alt', '')
+
+//   const section = document.createElement('section')
+//   section.className = 'location-text-wrapper'
+
+//   const title = document.createElement('h2') 
+//   title.className = 'thumbnail-title'
+//   title.appendChild(document.createTextNode(location.title))
+
+//   const paragraph = document.createElement('p')
+//   paragraph.appendChild(document.createTextNode(location.paragraph))
+
+//   const locationInfoWrapper = document.createElement('div')
+//   locationInfoWrapper.className = 'location-info-wrapper'
+//   const date = document.createElement('div')
+//   date.appendChild(document.createTextNode(location.date))
+//   date.className = 'location-info-text tag'
+//   function addTag(tags) {
+//     tag.forEach((tag, key) => {
+//       const locationTag = document.createElement('div')
+//       locationTag.className ='location-info-text tag'
+//       locationTag.appendChild(document.createTextNode(tag[key]))
+//     })
+//   } 
+// })
+  const newDiv = document.createElement("div");
+
+// and give it some content
+  const newContent = document.createTextNode("Hi there and greetings!");
+
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+
+}
