@@ -1,16 +1,10 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Sat Jul 09 2022 16:19:19 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="62c9aa5b9749a0f8fd84faeb" data-wf-site="62c9aa5b9749a0700384fadd">
+<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <title>WFA - Home</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/wfa-landing-page.webflow.css" rel="stylesheet" type="text/css">
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body>
   <div class="all-content wf-section">
@@ -23,143 +17,17 @@
       </div>
     </header>
     <div class="main-column content">
+      <div>
       <nav role="banner" class="navbar w-nav">
         <nav role="navigation" class="nav-menu w-nav-menu">
           <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">Places</a>
           <a href="about.html" class="nav-link w-nav-link">About</a>
         </nav>
       </nav>
+    </div>
       <div id="places-list" class="places-list"></div>
-
-
-        <script type ="text/javascript">
-          const favoriteLocationsData = [
-            {
-              image: 'images/colorado.JPG',
-              title: 'Colorado',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'March 2, 2022',
-              tags: [
-                'Travel',
-                'Nature'
-              ]
-            },
-            {
-              image: 'images/chiang-mai.JPG',
-              title: 'The Baristro',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique',
-              date: 'February 17, 2022',
-              tags: [
-                'Travel',
-                'Coffee Shop'
-              ]
-            },
-            {
-              image: 'images/france.JPG',
-              title: 'Paris',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'Jan 3, 2022',
-              tags: [
-                'Camera',
-                'Nature'
-              ]
-            },
-            {
-              image: 'images/forrest.JPG',
-              title: 'Thai Rain Forrest',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'Dec 15, 2021',
-              tags: [
-                'Work',
-                'Nature'
-              ]
-            },
-            {
-              image: 'images/vegas.JPG',
-              title: 'Vegas',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'Nov 1, 2021',
-              tags: [
-                'Travel',
-                'Pool Vibes'
-              ]
-            },
-            {
-              image: 'images/home.JPG',
-              title: 'Home',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'Nov 1, 2021',
-              tags: [
-                'Home',
-                'Family'
-              ]
-            },
-            {
-              image: 'images/bering-sea.jpg',
-              title: 'Airplanes',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-              date: 'Nov 1, 2021',
-              tags: [
-                'Travel',
-                'Vibes'
-              ]
-            },
-            
-          ]
-          addFavoriteLocations(favoriteLocationsData);
-          function addFavoriteLocations(locations){            
-            locations.forEach((location, key) => {           
-              const locationWrapper = document.createElement("div");
-              locationWrapper.className = 'location'
-              document.getElementById("places-list").appendChild(locationWrapper);
-              
-             const imageWrapper =  document.createElement("div")
-             imageWrapper.className = 'image-wrapper'
-             document.getElementsByClassName("location")[key].appendChild(imageWrapper);
-
-            const image = document.createElement('img')
-            image.className = 'thumbnail'
-            image.setAttribute('src', location.image)
-            image.setAttribute('width', '109')
-            image.setAttribute('alt', '')
-            document.getElementsByClassName("image-wrapper")[key].appendChild(image);
-
-            const section = document.createElement('section')
-            section.className = 'location-text-wrapper'
-            imageWrapper.after(section)
-
-            const title = document.createElement('h2') 
-            title.className = 'thumbnail-title'
-            title.appendChild(document.createTextNode(location.title))
-
-            
-            const paragraph = document.createElement('p')
-            paragraph.appendChild(document.createTextNode(location.paragraph))
-            
-            const locationInfoWrapper = document.createElement('div')
-            locationInfoWrapper.className = 'location-info-wrapper'
-
-            document.getElementsByClassName("location-text-wrapper")[key].appendChild(title);
-            document.getElementsByClassName("location-text-wrapper")[key].appendChild(paragraph)
-            document.getElementsByClassName("location-text-wrapper")[key].appendChild(locationInfoWrapper)
-
-             const date = document.createElement('div')
-             date.appendChild(document.createTextNode(location.date))
-             date.className = 'location-info-text tag'
-             document.getElementsByClassName("location-info-wrapper")[key].appendChild(date)
-             addTags(location.tags)
-             function addTags(tags) {
-              tags.forEach((tag, key) => {
-                const locationTag = document.createElement('div')
-                locationTag.className ='location-info-text tag'
-                locationTag.appendChild(document.createTextNode(tag))
-                date.after(locationTag)
-              })
-            } 
-           })
-          };
-    </script>
-    <div class="footer-wrapper">
+      <script type ="text/javascript" src='./js/locations.js'/>
+      <div class="footer-wrapper">
       <a href="index.html" aria-current="page" class="footer-nav-link w--current"><img src="images/home-icon.svg" alt=""></a>
       <a href="http://www.twitter.com/" class="footer-nav-link"><img src="images/twitter-icon.svg" alt=""></a>
     </div>
