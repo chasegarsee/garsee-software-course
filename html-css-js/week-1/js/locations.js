@@ -114,7 +114,7 @@ function addFavoriteLocations(locations){
    document.getElementsByClassName("location-info-wrapper")[key].appendChild(date)
    addTags(location.tags)
    function addTags(tags) {
-    tags.forEach((tag, key) => {
+    tags.forEach(tag => {
       const locationTag = document.createElement('div')
       locationTag.className ='location-info-text tag'
       locationTag.appendChild(document.createTextNode(tag))
